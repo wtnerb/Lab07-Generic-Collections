@@ -19,13 +19,20 @@ namespace DeckOfCards
             deck[topCard++] = card;
         }
 
+        public T AtIndex (int index)
+        {
+            return deck[index];
+        }
+
         public T DealOne()
         {
             if (deck.Length < topCard / 3)
             {
                 Array.Resize(ref deck, deck.Length / 2);
             }
-            return deck[topCard--];
+            T temp = deck[topCard--];
+            deck[topCard + 1] = default(T);
+            return temp;
         }
 
         public IEnumerator<T> GetEnumerator()
