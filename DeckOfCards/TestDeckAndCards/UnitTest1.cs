@@ -15,8 +15,8 @@ namespace TestDeckAndCards
         [Fact]
         public void CanCreateCard()
         {
-            Card ace = new Card((byte)Value.ace, (byte)Suit.Spades);
-            Assert.Equal(new int[] { ace.Value, ace.Suit }, new int[] { 2, 14 });
+            Card ace = new Card(V.Ace, S.Spades);
+            Assert.Equal(new int[] { ace.Value, ace.Suit }, new int[] { 14, 2 });
         }
     }
 }

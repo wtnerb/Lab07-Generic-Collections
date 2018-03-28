@@ -7,7 +7,7 @@ namespace DeckOfCards
     class Enums
     {
     }
-        public enum Suit : byte
+        public enum S : byte
         {
             Hearts = 1,
             Spades,
@@ -15,20 +15,20 @@ namespace DeckOfCards
             Clubs
         }
 
-        public enum Value : byte
+        public enum V : byte
         {
-            two = 2,
-            three,
-            four,
-            five,
-            six,
-            seven,
-            eight,
-            nine,
-            ten,
-            jack,
-            queen,
-            king,
-            ace
+            Two = 2,
+            Three,
+            Four,
+            Five,
+            Six,
+            Seven,
+            Eight,
+            Nine,
+            Ten,
+            Jack,
+            Queen,
+            King,
+            Ace
         }
 }

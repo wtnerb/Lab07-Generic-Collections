@@ -9,10 +9,10 @@ namespace DeckOfCards
         public int Suit { get; set; }
         public int Value { get; set; }
 
-        public Card(byte suit, byte value)
+        public Card(V value, S suit)
         {
-            Suit = suit;
-            Value = value;
+            Suit = (byte)suit;
+            Value = (byte)value;
         }
 
 
