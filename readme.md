@@ -13,11 +13,13 @@
 ## Directions
 Create a custom generic collection named `Deck<T>`.
 Your Generic collection should hold Cards. (You will need to create a custom Card class)
+You Cards should contain an Enum of the different card suites.
 The methods within your Deck<T> class should contain at minimum:
 1. Add
 2. Remove
 3. Shuffle
 	- The shuffle logic will randomize the index of each of the items in the generic Deck<T> object
+
 
 Your `Program.cs` Main method should demonstrate:
 1. the instantiation of the generic collection. 
@@ -28,6 +30,8 @@ Your `Program.cs` Main method should demonstrate:
 5. Use a Foreach loop on your created Deck, and output each of the cards to the console. 
 
 Unit tests are still required. 
+
+
 
 ## Stretch (3pts)
 - Manually implement the array removal and array add method. 
