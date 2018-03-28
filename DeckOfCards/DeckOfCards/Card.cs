@@ -15,30 +15,9 @@ namespace DeckOfCards
             Value = (byte)value;
         }
 
-
-        //public enum Suit : byte
-        //{
-        //    Heart,
-        //    Spade,
-        //    Diamond,
-        //    Club
-        //}
-
-        //public enum Value : byte
-        //{
-        //    two = 2,
-        //    three,
-        //    four,
-        //    five,
-        //    six,
-        //    seven,
-        //    eight,
-        //    nine,
-        //    ten,
-        //    jack,
-        //    queen,
-        //    king,
-        //    ace
-        //}
+        public bool IsSame (Card c)
+        {
+            return Suit == c.Suit && Value == c.Value;
+        }
     }
 }

@@ -19,7 +19,7 @@ namespace TestDeckAndCards
                 new Card(V.Jack, S.Diamonds),
                 new Card(V.Ten, S.Hearts),
             };
-            Assert.Equal(new Card(V.Ten, S.Hearts), test.AtIndex(4));
+            Assert.True(test.AtIndex(4).IsSame(new Card(V.Ten, S.Hearts)));
         }
 
         [Fact]
