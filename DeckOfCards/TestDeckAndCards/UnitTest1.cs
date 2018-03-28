@@ -12,9 +12,11 @@ namespace TestDeckAndCards
         //    Deck<Card> test = new Deck<Card>();
         //}
 
+        [Fact]
         public void CanCreateCard()
         {
-            Card ace = Card("ace", "spades");
+            Card ace = new Card((byte)Value.ace, (byte)Suit.Spades);
+            Assert.Equal(new int[] { ace.Value, ace.Suit }, new int[] { 2, 14 });
         }
     }
 }
