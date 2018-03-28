@@ -12,8 +12,8 @@
 
 ## Directions
 Create a custom generic collection named `Deck<T>`.
-Your Generic collection should hold Cards. (You will need to create a custom Card class)
-You Cards should contain an Enum of the different card suites.
+Your Generic collection should hold Cards. (You will need to create a custom Card class)<br />
+Your `Card.cs` should contain a proprty that has a type as an Enum of the different card suites (hearts, diamonds, spades, clubs)
 The methods within your Deck<T> class should contain at minimum:
 1. Add
 2. Remove
