@@ -6,13 +6,13 @@ namespace DeckOfCards
 {
     public class Card
     {
-        public int Suit { get; set; }
-        public int Value { get; set; }
+        public S Suit { get; set; }
+        public V Value { get; set; }
 
         public Card(V value, S suit)
         {
-            Suit = (byte)suit;
-            Value = (byte)value;
+            Suit = suit;
+            Value = value;
         }
 
         public bool IsSame (Card c)
