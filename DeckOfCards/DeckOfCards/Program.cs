@@ -42,8 +42,7 @@ namespace DeckOfCards
             PrintDeck(royals);
 
             Console.WriteLine("Ok. Now we have an awesome deck. Lets shuffle it up!");
-            royals.Shuffle();
-            PrintDeck(royals);
+            Deal(royals);
         }
 
         /// <summary>
@@ -58,5 +57,19 @@ namespace DeckOfCards
             }
             Console.WriteLine();
         }
+
+        /// <summary>
+        /// This will show the starting deck, shuffle it, and show the shuffled deck.
+        /// </summary>
+        /// <param name="deck">deck to shuffle</param>
+        public static void Deal(Deck<Card> deck)
+        {
+            Console.WriteLine("Starting deck");
+            PrintDeck(deck);
+            Console.WriteLine("shuffling ...");
+            deck.Shuffle();
+            PrintDeck(deck);
+        }
+
     }
 }
