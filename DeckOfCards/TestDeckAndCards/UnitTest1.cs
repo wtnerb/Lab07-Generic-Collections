@@ -7,10 +7,32 @@ namespace TestDeckAndCards
     public class UnitTest1
     {
         [Fact]
-        //[InlineData(new Card(V.Ten, S.Hearts),  4)]
-        //[InlineData(new Card(V.Queen, S.Clubs), 2)]
-        //[InlineData(new Card(V.Ace, S.Spades), 0)]
-        public void CanBuildDeck()
+        public void CanCreateCard()
+        {
+            Card ace = new Card(V.Ace, S.Spades);
+            Assert.Equal(new int[] { (int)ace.Value, (int)ace.Suit }, new int[] { 14, 2 });
+        }
+
+        [Fact]
+        public void CanCompareCardsTrue()
+        {
+            Assert.True(new Card(V.Eight, S.Diamonds).IsSame(new Card(V.Eight, S.Diamonds)));
+        }
+
+        [Fact]
+        public void CanCompareCardsFalseValue()
+        {
+            Assert.False(new Card(V.Eight, S.Diamonds).IsSame(new Card(V.Seven, S.Diamonds)));
+        }
+
+        [Fact]
+        public void CanCompareCardsFalseSuit()
+        {
+            Assert.False(new Card(V.Eight, S.Diamonds).IsSame(new Card(V.Eight, S.Clubs)));
+        }
+
+        [Fact]
+        public void CanAccessByIndex()
         {
             Deck<Card> test = new Deck<Card> {
                 new Card (V.Ace, S.Spades),
@@ -22,11 +44,5 @@ namespace TestDeckAndCards
             Assert.True(test.AtIndex(4).IsSame(new Card(V.Ten, S.Hearts)));
         }
 
-        [Fact]
-        public void CanCreateCard()
-        {
-            Card ace = new Card(V.Ace, S.Spades);
-            Assert.Equal(new int[] { (int)ace.Value, (int)ace.Suit }, new int[] { 14, 2 });
-        }
     }
 }
