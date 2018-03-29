@@ -15,3 +15,12 @@ Deck is generalized and can work with anything, although for this application ca
 
 ## Architecture
 Deck is a custom generic, Card is a custom class.
+
+## Expansion
+- Contains method
+- Search deck
+- Overload remove to remove from index
+- Overload remove to remove a specific card if it is found in the deck.
+
+## change log
+2018-03-28 19:30 version 1.0 released
